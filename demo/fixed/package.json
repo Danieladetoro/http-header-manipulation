@@ -1,0 +1,11 @@
+{
+  "name": "http-headers-fixed",
+  "version": "1.0.0",
+  "description": "Patched version (strict CORS + no caching on sensitive endpoints)",
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2"
+  }
+}
